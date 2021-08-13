@@ -37,8 +37,8 @@ return r
 // comece a criar a sua função factorial na linha abaixo
 function factorial (a){
   let r = a
-for (let i=a-1;i!==0;i--) {
- r = multiply(r,i)
+  for (let i=a-1;i!==0;i--) {
+  r = multiply(r,i)
 }
 return r
 }
@@ -52,7 +52,17 @@ return r
  */
 
 // crie a função fibonacci
-
+function fibonacci(n){
+  let r = [0]
+  let c = 1
+  let a = ""
+  for (let i = 0; i < n; i++) {
+    r.push(add(r[i], c))
+    a = add(r[i], c)
+    c = r[i]
+  }
+  return a 
+}
 
 // descomente a linha seguinte para testar sua função
-// console.assert(fibonacci(7) === 13, 'A função fibonacci não está funcionando como esperado');
+ console.assert(fibonacci(7) === 13, 'A função fibonacci não está funcionando como esperado');
